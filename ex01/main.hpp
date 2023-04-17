@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:49:21 by vstockma          #+#    #+#             */
-/*   Updated: 2023/04/17 11:22:24 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/04/17 13:27:02 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,4 @@
 
 void    display_contact_info(PhoneBook *phonebook);
 void    add_contact_info(PhoneBook *phonebook);
-void    init(PhoneBook *phonebook);
 #endif

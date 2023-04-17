@@ -6,13 +6,13 @@
 #    By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 13:54:54 by vstockma          #+#    #+#              #
-#    Updated: 2023/04/14 14:10:33 by vstockma         ###   ########.fr        #
+#    Updated: 2023/04/17 14:28:45 by vstockma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-SRC = mybook.cpp
+SRC = main.cpp contacts.cpp phonebook.cpp utils.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
