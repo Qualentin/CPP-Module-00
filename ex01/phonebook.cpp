@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 14:17:33 by vstockma          #+#    #+#             */
-/*   Updated: 2023/04/17 14:22:19 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/10/12 10:27:44 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void    PhoneBook::display_contact_info(PhoneBook *phonebook)
     display_columns(phonebook);
     std::cout << "Enter Index of which you want the contact infos:" << std::endl;
     std::cin >> index_string;
+    if (index_string.empty())
+            exit (1);
     while (check_if_input_is_an_int(index_string) == 1)
     {
         std::cout << "Only input numbers!" << std::endl;

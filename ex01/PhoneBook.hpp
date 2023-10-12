@@ -6,7 +6,7 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 15:03:46 by vstockma          #+#    #+#             */
-/*   Updated: 2023/04/17 14:28:01 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/04/18 12:03:51 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,4 @@ class PhoneBook
 
 int     check_if_input_is_an_int(std::string str);
 int     ft_get_len(std::string str);
-
-
 #endif
