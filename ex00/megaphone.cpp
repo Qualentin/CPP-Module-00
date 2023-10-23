@@ -6,18 +6,18 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:21:22 by vstockma          #+#    #+#             */
-/*   Updated: 2023/10/12 11:21:28 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:06:05 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-void print_arg_in_uppercase(char *str)
+void print_arg_in_uppercase(std::string str)
 {
     int i = 0;
     while (str[i])
     {
-        putchar(toupper(str[i]));
+        std::cout << (char)toupper(str[i]);
         i++;
     }
 }

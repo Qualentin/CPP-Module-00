@@ -6,16 +6,16 @@
 /*   By: vstockma <vstockma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 14:19:17 by vstockma          #+#    #+#             */
-/*   Updated: 2023/04/17 14:27:10 by vstockma         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:59:49 by vstockma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void    PhoneBook::ft_make_right_allignment(PhoneBook *phonebook, std::string str)
+void    PhoneBook::ft_make_right_allignment(std::string str)
 {
     int i = 0;
-    int len_of_info = ft_get_len(str);
+    int len_of_info = str.length();
     if (len_of_info < 10)
     {
         while (i < (10 - len_of_info))
@@ -23,18 +23,38 @@ void    PhoneBook::ft_make_right_allignment(PhoneBook *phonebook, std::string st
             std::cout << " ";
             i++;
         }
-        std::cout << str << "|";
+        i = 0;
+        while (str[i] && i < 10)
+        {
+            if (isspace(str[i]) != 0)
+                std::cout << ' ';
+            else
+                std::cout << str[i];
+            i++;
+        }
+        std::cout << "|";
         return ;
     }
     else if (len_of_info == 10)
     {
-        std::cout << str << "|";
+        while (i < 10)
+        {
+            if (isspace(str[i]) != 0)
+                std::cout << ' ';
+            else if (isspace(str[i]) == 0)
+                std::cout << str[i];
+            i++;
+        }
+        std::cout << "|";
         return ;
     }
     i = 0;
     while (i < 9)
     {
-        std::cout << str[i];
+        if (isspace(str[i]) == 1)
+            std::cout << ' ';
+        else
+            std::cout << str[i];
         i++;
     }
     std::cout << ".|";
@@ -50,12 +70,4 @@ int     check_if_input_is_an_int(std::string str)
         i++;
     }
     return (0);
-}
-
-int     ft_get_len(std::string str)
-{
-    int i = 0;
-    while (str[i])
-        i++;
-    return (i);
 }
